@@ -81,6 +81,7 @@ li {
 .menu li a {
   display: flex;
   gap: 9px;
+  gap: 9px;
   align-items: center;
   text-align: center;
   white-space: nowrap;
@@ -106,9 +107,11 @@ li {
   font-size: 1.375rem;
   display: flex;
   gap: 24px;
+  gap: 24px;
 }
 .phone {
   display: flex;
+  gap: 24px;
   gap: 24px;
   align-items: center;
   text-align: center;
