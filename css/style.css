@@ -33,19 +33,7 @@ li {
 }
 .header {
   padding-top: 2.291666666666667%;
-  position: relative;
   overflow: hidden;
-}
-/* Эта картинка должна быть дочерним элементом пеового блока (превью), который находится сразу под header. 
-Родительский блок должен иметь position: relative и картинка должна располагаться относительно родительсого блока. 
-Сейчас она располагается отосительно всего сайта.
-Возможно нужно будет задать left и top в процентах. Надо смотреть */
-.arms {
-  position: absolute;
-  /* width: 68.54166666666667%;
-  height: 45.88541666666667%; */ /* Эти значения не нужны, если посмотреть, они не работают */
-  left: 794px;
-  top: 206px;
 }
 .header-line {
   box-sizing: border-box;
@@ -56,7 +44,6 @@ li {
   justify-content: space-between;
   padding: 0 40px;
   margin: 0 auto;
-  /* gap: 13%; */ /* лишнее, уже есть justify-content: space-between; - свойство, которое располагает элементы равномерно */
 }
 .header-line li {
   list-style-type: none;
@@ -70,26 +57,22 @@ li {
   text-align: center;
   position: relative;
 }
-
-/* Лучше назвать этот блок nav и в теге nuv уже ul. nuv - навигация.
-У тебя сейчас уменьшаются расстояния между элементами - это хорошо. Но расстояние между другими элементами в шапке не изменяются - смотрится не корректно.
-Должны изменяться все расстояния в шапке*/
-.menu {
+.nav {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   text-align: center;
-  flex-grow: 1;
+  flex-grow: 2;
   justify-content: center;
   gap: 3%;
   width: fit-content;
 }
-.menu li {
+.nav li {
   display: flex;
   align-items: center;
   text-align: center;
 }
-.menu li a {
+.nav li a {
   display: flex;
   gap: 10.46875%;
   align-items: center;
@@ -105,22 +88,23 @@ li {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
-  gap: 25px;
+  justify-content: end;
+  gap: 7%;
+  width: fit-content;
+  flex-grow: 1;
 }
 .secondary__menu li {
-  /* margin-right: 1.770833333333333%; */ /* лишнее */
   white-space: nowrap;
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: #333333;
   font-size: 1.375rem;
   display: flex;
-  gap: 24px;
+  gap: 10%;
 }
 .phone {
   display: flex;
-  gap: 24px;
+  gap: 7%;
 
   align-items: center;
   text-align: center;
@@ -131,14 +115,10 @@ li {
   letter-spacing: 0.01em;
   color: #333333;
 }
-
-/* Блоки с классами offer, offer2, mouse и outline находятся, по макету, на одном экране.
-Соответственно, они должны находиться в одном контейнере, которому ты должен будешь задать отступы и после этого убрать не нужные отступы у дочерних элементов.
-Сейчас ты задал всем перечислиным классам отступы - это не совсем правильно. Хватит одного оступа родителю.
-Так же картинку с руками в этот контейнер. */
-.offer {
-  margin-left: 8.4375%;
+.main__block {
+  position: relative;
   margin-top: 150px;
+  margin-left: 8.4375%;
 }
 .offer p {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
@@ -162,8 +142,6 @@ li {
   display: flex;
   gap: 43px;
   align-items: center;
-  margin-left: 8.59375%;
-  margin-top: 53px;
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -175,14 +153,15 @@ li {
 }
 .mouse {
   position: absolute;
-  width: 20.61px;
-  height: 511.15px;
-  left: 44.28px;
-  top: 322.25px;
+  left: -6.13125%;
+  top: 10.78385416666667%;
 }
-.outline {
-  margin-left: 9.0625%;
+.arms {
+  position: absolute;
+  left: 41.35416666666667%;
+  top: -10.72916666666667%;
 }
+
 .pre__button {
   display: flex;
   align-items: center;
