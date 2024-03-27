@@ -115,15 +115,15 @@ li {
   letter-spacing: 0.01em;
   color: #333333;
 }
-/* Задай этому блоку верхний и нижний padding всесто margin тут и у блока с классом .steps */
 .main__block {
   position: relative;
-  margin-top: 150px;
+  padding-top: 150px;
+  padding-bottom: 87px;
   margin-left: 8.4375%;
 }
 .offer p {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-size: 2.25rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (2.25 - 1) + 1rem);
   letter-spacing: 0.03em;
   opacity: 0.7;
   font-weight: 300;
@@ -131,13 +131,11 @@ li {
   word-spacing: 1.875rem;
 }
 .offer h1 {
-  font-size: 3.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (3.5 - 1) + 1rem);
   font-weight: 800;
   letter-spacing: 3%;
   text-transform: uppercase;
-  white-space: nowrap;
 }
-
 .offer2 {
   position: relative;
   display: flex;
@@ -146,36 +144,34 @@ li {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
   line-height: 2rem;
-  white-space: nowrap;
+
   color: #3d3d3d;
   margin-bottom: 2.708333333333333%;
 }
 .mouse {
   position: absolute;
   left: -6.13125%;
-  top: 10.78385416666667%;
+  top: 20.78385416666667%;
 }
-/* Я бы использовал в этом месте right вместо left, где-то -15%, примерно, надо считать. 
-И сам div вокруг картинки лишний, лучше задать класс .arms непосредственно тегу img */
 .arms {
   position: absolute;
-  left: 41.35416666666667%;
-  top: -10.72916666666667%;
+  right: -25%;
+  top: 8%;
+  height: calc(93% - 1px);
+  width: calc(93% - 50px);
 }
-
 .pre__button {
   display: flex;
   align-items: center;
   gap: 57px;
-  margin-bottom: 60px;
 }
 .pre__button__text h2 {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
   line-height: 292%;
   color: #232323;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
@@ -193,7 +189,7 @@ li {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
   line-height: 292%;
   color: #ffffff;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
@@ -201,7 +197,7 @@ li {
 }
 .steps {
   align-items: center;
-  margin-bottom: 87px;
+  padding-top: 60px;
 }
 .block {
   display: flex;
@@ -229,7 +225,7 @@ li {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 2.0625rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (2.0625 - 1) + 1rem);
   line-height: 82%;
   color: #787878;
 }
@@ -237,7 +233,7 @@ li {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
   line-height: 2rem;
   white-space: nowrap;
   color: #3d3d3d;
@@ -265,7 +261,7 @@ li {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
   line-height: 112%;
   color: #ffffff;
 }
