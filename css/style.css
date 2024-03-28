@@ -130,6 +130,7 @@ li {
   color: #222222;
   word-spacing: 1.875rem;
 }
+/* Не плохая работа со шрифтами. Постарайся применить это ко всем шрифтам, чтобы картинка уменьшалась пропорционально.*/
 .offer h1 {
   font-size: calc((100vw - 30rem) / (120 - 30) * (3.5 - 1) + 1rem);
   font-weight: 800;
@@ -155,6 +156,8 @@ li {
   left: -6.13125%;
   top: 20.78385416666667%;
 }
+/* Сейчас картинка уменьшается не пропорционально. Попробуй сделать height: auto. 
+А так же изменить top: 8% на bottom: 0, так как у тебя картинка должна быть пребита к полу и не зависеть от высоты блока  */
 .arms {
   position: absolute;
   right: -25%;
@@ -176,6 +179,7 @@ li {
   color: #232323;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
 }
+/* Кнопка фиксированного размера. Необходимо так же чтобы она динамически меняла размер при изменении экрана. */
 .button {
   width: 353px;
   height: 95px;
@@ -293,11 +297,12 @@ li {
   letter-spacing: 0.03em;
   color: #2d2d2d;
 }
+
 .border-block {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 0 139px 0;
+  padding: 0 139px 0; /* фиксированный padding, не правильно */
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .border-block1 {
@@ -336,7 +341,7 @@ li {
   margin: 0 0 2.5rem;
 }
 .box__text {
-  font-size: 21px;
+  font-size: 21px; /* фиксированный размер шрифта */
   font-weight: 400;
   line-height: 1.2999999637;
   color: #343434;
@@ -382,14 +387,15 @@ li {
   width: 44.479%;
   padding-bottom: 8.125rem;
 }
+
 .box5__title {
-  padding: 0 0 0 60px;
+  padding: 0 0 0 60px; /* Фиксированные отступы, возможно стоит использовать % */
 }
 .box5__text {
-  padding: 0 0 0 60px;
+  padding: 0 0 0 60px; /* Фиксированные отступы, возможно стоит использовать % */
 }
 .box5__text2 {
-  padding-left: 290px;
+  padding-left: 290px; /* Фиксированные отступы, возможно стоит использовать % */
 }
 .box2_img {
   position: absolute;
@@ -401,6 +407,8 @@ li {
   left: -20px;
   bottom: -8px;
 }
+/* Эта картинка перектывает текст. Если текст наехжает на картинку, он должен быть поверх её.
+Проверь это со всеми картинками */
 .box3_img {
   position: absolute;
   right: -20px;
