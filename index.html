@@ -1,268 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <title>СМК</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
   </head>
   <body>
-    <header id="header" class="header">
-      <div class="container">
-        <div class="header-line">
-          <div class="header-logo">
-            <img src="/img/logo5 1.png" alt="mk" />
-          </div>
-          <ul class="nav">
-            <li>
-              <a href="#"> О компании </a>
-            </li>
-            <li>
-              <a href="#">
-                Услуги
-                <img src="/img/Vector.png" alt="menu" />
-              </a>
-            </li>
-            <li>
-              <a href="#"> Блог </a>
-            </li>
-            <li>
-              <a href="#"> Вопросы-ответы </a>
-            </li>
-            <li>
-              <a href="#"> Контакты </a>
-            </li>
-          </ul>
-          <ul class="secondary__menu">
-            <li><img src="/img/mail.svg" alt="envelope" /> info@smk-gr.ru</li>
-            <li>
-              <a href="tel:+74959975027" div class="phone">
-                <img src="/img/phone.svg" alt="number" /> +7 (495) 997-50-27
-              </a>
-            </li>
-            <li>
-              <img src="/img/Group 3.svg" alt="list" />
-            </li>
-          </ul>
-        </div>
-        <div class="main__block">
-          <div class="offer">
-            <p>Проектирование Монтаж Обслуживание</p>
-            <h1>Систем пожарной сигнализации</h1>
-          </div>
-          <div class="offer2">
-            <img src="/img/Rectangle 23.png" alt="ball" />
-            <p>
-              На объектах любого масштаба - от небольшого офиса до сложной
-              распределенной <br />системы на крупных предприятиях
-            </p>
-          </div>
-          <div class="mouse">
-            <img src="/img/mouse.png" alt="mouse" />
-          </div>
-          <div class="outline pre__button">
-            <div class="pre__button__text">
-              <h2>ЭКСПРЕСС-РАСЧЁТ СТОИМОСТИ:</h2>
-            </div>
-            <a href="#" class="button">Оставить заявку</a>
-          </div>
-
-          <div class="outline steps">
-            <div class="block">
-              <div class="number">
-                <p>1</p>
-              </div>
-              <div class="number__text">
-                <p>
-                  Звоните/оставьте заявку или пишите <br />нам на почту, в
-                  Телеграм/Вотсап
-                </p>
-              </div>
-              <div class="contact">
-                <a href="#" img src="/img/telegram.png" alt="telegram"></a>
-                <a href="#" img src="/img/whatsapp.png" alt="whatsapp"></a>
-              </div>
-            </div>
-            <div class="block">
-              <div class="number">
-                <p>2</p>
-              </div>
-              <div class="number__text">
-                <p>
-                  Мы оперативно ответим, уточним детали и предоставим <br />
-                  предварительное коммерческое предложение в течение дня
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <div class="number">
-                <p>3</p>
-              </div>
-              <div class="number__text">
-                <p>
-                  После налаженной коммуникации - бесплатный <br />визит
-                  специалиста для окончательного расчёта
-                </p>
-              </div>
-            </div>
-          </div>
-          <img class="arms" src="/img/arms.png" alt="arms" />
-        </div>
-        <div class="rectangle__container">
-          <div class="rectangle rectangle1">
-            <div class="rectangle__text">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="header__left">
+            <a href="#" class="header__logo">
+              <img src="/img/header/logo.png" alt="logo" />
+            </a>
+            <div class="header__decor header__decor_red"></div>
+            <div class="header__text-logo">
               <p>
-                Мы с 2002 года на рынке <br />
-                систем безопасности
+                Установка систем безопаности в <br />
+                Москве и области c 2002 года
               </p>
             </div>
           </div>
-          <div class="rectangle rectangle2">
-            <div class="rectangle__text">
+          <div class="header__address">
+            <address>
+              м. Южная, Варшавское ш. 132с9 <br />
+              Пн-Пт 9.00-18.00
+            </address>
+          </div>
+          <div class="header__right">
+            <div class="header__decor"></div>
+            <a class="header__email" href="mailto:info@smk-gr.ru"
+              >info@smk-gr.ru</a
+            >
+            <div class="header__decor"></div>
+            <a class="header__phone" href="tel:+74959975027"
+              >+7 (495) 997-50-27</a
+            >
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О компании</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Услуги</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Блог</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Вопросы-ответы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Лицензии</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button class="header__consultation" type="button">
+            Заказать звонок <span>Расчет, консультация</span>
+          </button>
+        </div>
+      </div>
+      <div class="main__block">
+        <div class="offer">
+          <p>Проектирование Монтаж Обслуживание</p>
+          <h1>Систем пожарной сигнализации</h1>
+        </div>
+        <div class="offer2">
+          <img src="/img/rectangle.png" alt="ball" />
+          <p>
+            На объектах любого масштаба - от небольшого офиса до сложной
+            распределенной <br />системы на крупных предприятиях
+          </p>
+        </div>
+        <img class="mouse" src="/img/mouse.png" alt="mouse" />
+        <div class="outline pre__button">
+          <div class="pre__button__text">
+            <h2>ЭКСПРЕСС-РАСЧЁТ СТОИМОСТИ:</h2>
+          </div>
+          <a href="#" class="button">Оставить заявку</a>
+        </div>
+        <div class="outline steps">
+          <div class="block">
+            <div class="number">
+              <p>1</p>
+            </div>
+            <div class="number__text">
               <p>
-                Скидки на оборудование <br />
-                за счет нашей компании
+                Звоните/оставьте заявку или пишите нам на почту,<br />
+                в Телеграм/Вотсап
+              </p>
+            </div>
+            <div class="contact">
+              <a href="#" img src="/img/telegram.png" alt="telegram"></a>
+              <a href="#" img src="/img/whatsapp.png" alt="whatsapp"></a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="number">
+              <p>2</p>
+            </div>
+            <div class="number__text">
+              <p>
+                Мы оперативно ответим, уточним детали и предоставим
+                предварительное <br />
+                коммерческое предложение в течение дня
               </p>
             </div>
           </div>
-          <div class="rectangle rectangle3">
-            <div class="rectangle__text">
-              <p>Гарантия на работы <br />12 месяцев</p>
+          <div class="block">
+            <div class="number">
+              <p>3</p>
             </div>
-          </div>
-          <div class="rectangle rectangle4">
-            <div class="rectangle__text">
+            <div class="number__text">
               <p>
-                Бесплатный выезд <br />
-                специалиста
+                После налаженной коммуникации - бесплатный визит специалиста для
+                <br />окончательного расчёта
               </p>
             </div>
           </div>
         </div>
+        <img class="arms" src="/img/arms.png" alt="arms" />
       </div>
     </header>
-    <section>
-      <div class="flex">
-        <div class="preview">
-          <div class="preview__text">
-            <p>Как мы работаем?</p>
-          </div>
-          <h2 class="preview__title">
-            Что вы получаете в процессе <br />и результате сотрудничества:
-          </h2>
-        </div>
-        <div class="box box1">
-          <p class="box__number">01</p>
-          <h2 class="box__title">Обследование и расчёт стоимости</h2>
-          <div class="box__text">
-            Повседневная практика показывает, что постоянный <br />
-            количественный рост и сфера нашей активности способствует <br />
-            подготовки и реализации модели развития. Не следует, однако <br />
-            забывать, что начало повседневной работы по формированию <br />
-            позиции позволяет оценить значение соответствующий условий <br />
-            активизации.
-          </div>
-        </div>
-      </div>
-
-      <div class="border-block border-block1">
-        <div class="box box2">
-          <p class="box__number">02</p>
-          <h3 class="box__title">Заключение договора</h3>
-          <img class="box2_img" src="/img/dogovor.svg" alt="red_paper" />
-          <div class="box__text box-texts">
-            <p>
-              Гарантия соответствия результата работ <br />
-              действующим нормам РФ. В случае <br />
-              несоответствия устраним недостатки за свой <br />счёт
-            </p>
-            <p>
-              Гарантия соблюдения сроков. За каждый день <br />
-              просрочки заплатим неустойку
-            </p>
-            <p>
-              Гарантия финальной стоимости - если не <br />изменится объем работ
-              по инициативе <br />
-              Заказчика, цена останется неизменной
-            </p>
-          </div>
-        </div>
-
-        <div class="box box3">
-          <p class="box__number color__num">03</p>
-          <h4 class="box__title box3__title">Проектирование</h4>
-          <img class="box3_img" src="/img/chertezi.svg" alt="draws" />
-          <div class="box__text box3__text box-texts">
-            <p>
-              Тщательное изучение объекта и <br />корректировка планов.
-              Индивидуальный<br />
-              подбор и размещение оборудования с <br />
-              учётом ваших пожеланий/ремонта/дизайна.
-            </p>
-            <p>
-              Соответствующая нормам проектная <br />документация, при
-              необходимости с <br />экспертизой, в печати и цифре.
-            </p>
-            <p>
-              Подробная спецификация и расчёт<br />
-              стоимости монтажа.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="border-block border-block2">
-        <div class="box box4">
-          <p class="box__number color__num">04</p>
-          <h5 class="box__title box4__title">Монтаж и пнр</h5>
-          <img class="box4_img" src="/img/pnr.svg" alt="pnr" />
-          <div class="box__text box4__text box-texts">
-            <p>
-              Равным образом укрепление и развитие стурктуры влечет за собой
-              процесс внедрения <br />
-              и модернизации системы обучения кадров, соотвествует насущным
-              потребностям. <br />
-              Идейные соображения высшего порядка, а так же постоянный
-              количественный.
-            </p>
-            <p>
-              Рости сфера нашей активности влечет за собой процесс <br />
-              внедрения и модернизации модели <br />
-              развития
-            </p>
-          </div>
-        </div>
-        <div class="box box5">
-          <p class="box__number">05</p>
-          <img class="box5_img" src="/img/redbook.svg" alt="redbook" />
-          <h4 class="box__title box5__title">Техническое обслуживание</h4>
-
-          <p class="box__text box5__text">
-            При создании генератора мы использовали небезызвестный <br />
-            универсальный код речей. Текст генерируется абзацами <br />
-            случайным образом от двух до десяти.
-            <br />
-            <br />
-          </p>
-          <p class="box__text box5__text2">
-            Сайт рыбатекст поможет дизайнеру,
-            <br />
-            верстальщику, вебмастеру
-            <br />
-            сгенерировать несколько абзацев
-            <br />
-            более менее осмысленного текста
-            <br />
-            рыбы на русском языке
-          </p>
-        </div>
-      </div>
-    </section>
   </body>
 </html>

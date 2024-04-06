@@ -1,13 +1,27 @@
-@import "./texts.css";
-
-body {
-  height: 100%;
-  background-image: url("/img/background.jpg");
-  background-size: cover;
-  background-position: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 p,
 h1,
@@ -16,173 +30,253 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+body,
+html {
+  height: 100%;
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+  background-position: center;
   margin: 0;
-}
-* {
-  box-sizing: border-box;
-}
-ul,
-li {
-  display: block;
   padding: 0;
-  margin: 0;
+  font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+  line-height: 1;
 }
-.container {
-  box-sizing: border-box;
+.header__decor {
+  width: 1px;
+  height: 36px;
+  background-color: #dfdfdf;
+}
+.header__decor_red {
+  background-color: #d13737;
 }
 .header {
-  padding-top: 2.291666666666667%;
+  padding: 1.493055555555556% 0px 0px;
+  font-family: "Roboto Condensed";
   overflow: hidden;
 }
-.header-line {
-  box-sizing: border-box;
+.header__container {
+  margin: 0px auto;
+  max-width: 1440px;
+  padding-left: 2.777777777777778%;
+}
+.header__top {
   display: flex;
-  align-items: center;
-  text-align: center;
-  white-space: nowrap;
   justify-content: space-between;
-  padding: 0 40px;
-  margin: 0 auto;
+  column-gap: 30px;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (0.9375 - 1) + 1rem);
+  color: #545454;
+  padding-bottom: 1.006944444444444%;
+  border-bottom: 1px solid #dfdfdf;
 }
-.header-line li {
-  list-style-type: none;
-}
-.header-line li a {
-  text-decoration: none;
-}
-.header-logo {
+.header__left {
   display: flex;
   align-items: center;
+  column-gap: 29px;
+}
+.header__logo {
+  width: 70px;
+  height: 39px;
+}
+.header__logo img {
+  max-width: 100%;
+  max-height: 39px;
+  object-fit: cover;
+}
+.header__text-logo {
+  line-height: 1.3;
+}
+.header__address {
+  line-height: 1.3;
   text-align: center;
+}
+.header__address address {
+  font-style: normal;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  color: #222;
+}
+.header__email {
+  position: relative;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.0625 - 1) + 1rem);
+  font-weight: 500;
+  padding-left: 36px;
+  white-space: nowrap;
+}
+.header__email::before {
+  content: "";
+  width: 19px;
+  height: 14px;
+  background: url("../img/header/email.svg") 0 0 no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+.header__phone {
+  font-family: "Roboto Flex";
+  font-weight: 800;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.25 - 1) + 1rem);
+  white-space: nowrap;
+  padding-right: 40px;
+}
+.header__bottom {
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+.header__consultation {
+  position: relative;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.65);
+  font-weight: 500;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1 - 1) + 1rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: #fff;
+  padding-right: 40px;
+  padding-left: 69px;
+}
+.header__consultation span {
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+}
+.header__consultation::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url("../img/header/phone.svg") 0 0 no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0%, -50%);
+}
+.menu {
+  padding: 1.527777777777778% 0px 1.527777777777778% 2.222222222222222%;
+}
+.menu__list {
+  display: flex;
+  column-gap: 93px;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1 - 1) + 1rem);
+  color: #4f4f4f;
+}
+.menu__item {
   position: relative;
 }
-.nav {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-grow: 2;
-  justify-content: center;
-  gap: 3%;
-  width: fit-content;
+.menu__item:not(:last-child)::before {
+  content: "";
+  width: 1px;
+  height: 36px;
+  background-color: #dfdfdf;
+  position: absolute;
+  top: 50%;
+  right: -46px;
+  transform: translate(0%, -50%);
 }
-.nav li {
-  display: flex;
-  align-items: center;
-  text-align: center;
+.menu__item:nth-child(2) {
+  padding-right: 16.5px;
 }
-.nav li a {
-  display: flex;
-  gap: 10.46875%;
-  align-items: center;
-  text-align: center;
-  white-space: nowrap;
-  color: #545454;
-  font-size: 1.375rem;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+.menu__item:nth-child(2)::after {
+  content: "";
+  width: 8.5px;
+  height: 5px;
+  background: url("/img/header/check_mark.png") 0 0 / contain no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0%, -50%);
 }
-.secondary__menu {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: end;
-  gap: 7%;
-  width: fit-content;
-  flex-grow: 1;
-}
-.secondary__menu li {
-  white-space: nowrap;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  color: #333333;
-  font-size: 1.375rem;
-  display: flex;
-  gap: 10%;
-}
-.phone {
-  display: flex;
-  gap: 7%;
-
-  align-items: center;
-  text-align: center;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1.5625rem;
-  line-height: 1.8125rem;
-  letter-spacing: 0.01em;
-  color: #333333;
+.menu__link {
+  position: relative;
 }
 .main__block {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 87px;
-  margin-left: 8.4375%;
+  padding-top: 5%;
+  margin-left: 7.916666666666667%;
 }
 .offer p {
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (2.25 - 1) + 1rem);
-  letter-spacing: 0.03em;
-  opacity: 0.7;
+  font-family: "Roboto Condensed";
+  font-style: normal;
   font-weight: 300;
-  color: #222222;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.625 - 1) + 1rem);
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  color: rgba(34, 34, 34, 0.8);
+  opacity: 0.7;
   word-spacing: 1.875rem;
 }
-/* Не плохая работа со шрифтами. Постарайся применить это ко всем шрифтам, чтобы картинка уменьшалась пропорционально.*/
 .offer h1 {
-  font-size: calc((100vw - 30rem) / (120 - 30) * (3.5 - 1) + 1rem);
+  font-family: "Roboto Flex";
+  font-style: normal;
   font-weight: 800;
-  letter-spacing: 3%;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (2.625 - 1) + 1rem);
+  line-height: 130%;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: #222222;
 }
 .offer2 {
   position: relative;
   display: flex;
-  gap: 43px;
+  gap: 2.239583333333333%;
   align-items: center;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
-  line-height: 2rem;
-
-  color: #3d3d3d;
-  margin-bottom: 2.708333333333333%;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.1875 - 1) + 1rem);
+  line-height: 130%;
+  color: #484848;
+  margin-bottom: 2.222222222222222%;
 }
 .mouse {
   position: absolute;
   left: -6.13125%;
-  top: 20.78385416666667%;
+  top: 27.78385416666667%;
+  height: 365.82px;
 }
-/* Сейчас картинка уменьшается не пропорционально. Попробуй сделать height: auto. 
-А так же изменить top: 8% на bottom: 0, так как у тебя картинка должна быть пребита к полу и не зависеть от высоты блока  */
+
 .arms {
   position: absolute;
-  right: -25%;
-  top: 8%;
-  height: calc(93% - 1px);
-  width: calc(93% - 50px);
+  right: -15%;
+  bottom: 0;
+  height: auto;
+  width: calc(75% - 50px);
 }
 .pre__button {
   display: flex;
   align-items: center;
-  gap: 57px;
+  gap: 2.96875%;
 }
 .pre__button__text h2 {
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
-  line-height: 292%;
-  color: #232323;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.125 - 1) + 1rem);
+  line-height: 389%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #454545;
 }
-/* Кнопка фиксированного размера. Необходимо так же чтобы она динамически меняла размер при изменении экрана. */
 .button {
-  width: 353px;
-  height: 95px;
+  width: 20%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,232 +284,59 @@ li {
   background: #d13737;
   border-radius: 5px;
   text-decoration: none;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
-  line-height: 292%;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.125 - 1) + 1rem);
+  line-height: 389%;
+  display: flex;
+  align-items: center;
+  text-align: center;
   color: #ffffff;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
   text-transform: uppercase;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
 }
 .steps {
   align-items: center;
-  padding-top: 60px;
+  padding-top: 3.125%;
 }
 .block {
   display: flex;
-  gap: 29px;
-  margin-bottom: 35px;
+  gap: 1.510416666666667%;
+  margin-bottom: 1.388888888888889%;
 }
 .contact {
   display: flex;
-  gap: 22.98px;
+  gap: 1.196875%;
 }
 .number {
   display: flex;
   align-items: center;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   background-color: transparent;
   border-radius: 50%;
   justify-content: center;
   color: #a4a4a4;
-  font-size: 1.5rem;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.75 - 1) + 1rem);
   border: 1px solid #a4a4a4;
 }
 .number p {
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (2.0625 - 1) + 1rem);
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.75 - 1) + 1rem);
   line-height: 82%;
   color: #787878;
 }
 .number__text {
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  display: flex;
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
-  line-height: 2rem;
-  white-space: nowrap;
+  font-size: calc((100vw - 30rem) / (90 - 30) * (1.125 - 1) + 1rem);
+  line-height: 130%;
   color: #3d3d3d;
 }
-.rectangle__container {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
-.rectangle {
-  position: relative;
-  background-color: #353535;
-  padding: 3% 4% 3% 4%;
-  border-right: 1px solid #656565;
-  width: 100%;
-}
-.rectangle1 {
-  padding-left: 11%;
-}
-.rectangle4 {
-  padding-right: 20%;
-}
-.rectangle__text {
-  white-space: nowrap;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: calc((100vw - 30rem) / (120 - 30) * (1.5 - 1) + 1rem);
-  line-height: 112%;
-  color: #ffffff;
-}
-.flex {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 7.24%;
-  box-sizing: border-box;
-}
-.preview {
-  position: relative;
-  max-width: 888px;
-  padding: 4.3% 0 3%;
-  max-width: 55.52%;
-}
-.preview__text {
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-size: 2.25rem;
-  font-weight: 300;
-  line-height: 2.9375rem;
-  letter-spacing: 0.03em;
-  color: #222222b2;
-}
-.preview__title {
-  text-transform: uppercase;
-  font-size: 3.125rem;
-  font-weight: 800;
-  line-height: 4.0625rem;
-  letter-spacing: 0.03em;
-  color: #2d2d2d;
-}
 
-.border-block {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 139px 0; /* фиксированный padding, не правильно */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-.border-block1 {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-}
-.border-block2 {
-  margin: -1px 0 0;
-}
-.box {
-  padding: 60px;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-.box__number {
-  position: absolute;
-  left: -23px;
-  top: -55px;
-  font-size: 200px;
-  font-weight: 800;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.0399999991);
-  white-space: nowrap;
-  position: absolute;
-}
-.color__num {
-  color: rgba(255, 255, 255, 0.04);
-}
-.box__title {
-  font-size: 1.875rem;
-  font-weight: 800;
-  line-height: 2.4375rem;
-  color: #363636;
-  text-transform: uppercase;
-  margin: 0 0 2.5rem;
-}
-.box__text {
-  font-size: 21px; /* фиксированный размер шрифта */
-  font-weight: 400;
-  line-height: 1.2999999637;
-  color: #343434;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-}
-.box-texts {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-}
-.box1 {
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
-}
-.box2 {
-  width: 100%;
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
-}
-.box3 {
-  background-color: #484848;
-  width: 100%;
-}
-.box3__title {
-  color: #f2f2f2;
-}
-.box3__text {
-  color: #f2f2f2;
-}
-.box4 {
-  background-color: #3b3b3b;
-  width: 55.521%;
-  padding-bottom: 8.125rem;
-}
-.box4__title {
-  color: #f2f2f2;
-}
-.box4__text {
-  color: #f2f2f2;
-}
-.box5 {
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-  padding-left: 0;
-  width: 44.479%;
-  padding-bottom: 8.125rem;
-}
-
-.box5__title {
-  padding: 0 0 0 60px; /* Фиксированные отступы, возможно стоит использовать % */
-}
-.box5__text {
-  padding: 0 0 0 60px; /* Фиксированные отступы, возможно стоит использовать % */
-}
-.box5__text2 {
-  padding-left: 290px; /* Фиксированные отступы, возможно стоит использовать % */
-}
-.box2_img {
-  position: absolute;
-  left: 408px;
-  top: 37px;
-}
-.box5_img {
-  position: absolute;
-  left: -20px;
-  bottom: -8px;
-}
-/* Эта картинка перектывает текст. Если текст наехжает на картинку, он должен быть поверх её.
-Проверь это со всеми картинками */
-.box3_img {
-  position: absolute;
-  right: -20px;
-  bottom: 0;
-}
-.box4_img {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
