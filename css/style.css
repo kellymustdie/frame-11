@@ -62,7 +62,7 @@ html {
 }
 .header__container {
   margin: 0px auto;
-  max-width: 1440px;
+  max-width: 1440px; /* Убери фиксированную ширину */
   padding-left: 2.777777777777778%;
 }
 .header__top {
@@ -148,7 +148,7 @@ html {
   letter-spacing: -0.01em;
   text-align: right;
   color: #fff;
-  padding-right: 40px;
+  padding-right: 40px; /* Нужно убрать фиксированный отступ */
   padding-left: 69px;
 }
 .header__consultation span {
@@ -171,7 +171,7 @@ html {
 }
 .menu__list {
   display: flex;
-  column-gap: 93px;
+  column-gap: 93px; /* Попробуй justify-content: space-between; или gap в процентах */
   font-size: calc((100vw - 30rem) / (90 - 30) * (1 - 1) + 1rem);
   color: #4f4f4f;
 }
@@ -204,6 +204,8 @@ html {
 .menu__link {
   position: relative;
 }
+
+/* Наверное должен иметь какой-то нижний отступ */
 .main__block {
   position: relative;
   padding-top: 5%;
@@ -256,7 +258,7 @@ html {
   right: -15%;
   bottom: 0;
   height: auto;
-  width: calc(75% - 50px);
+  width: calc(75% - 50px); /* В какой-то момент картинка слишком сильно увеличивается и перекрывает header (нужен медиазапрос для ширины большей 1440px) */
 }
 .pre__button {
   display: flex;
